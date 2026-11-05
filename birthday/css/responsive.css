@@ -1,0 +1,189 @@
+/* ====================================================================
+   THE DIYA EDIT — ISSUE NO. 21
+   RESPONSIVE DESIGN SYSTEM
+   ==================================================================== */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 1024px) {
+  .cover-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .cover-col-left {
+    order: 2;
+  }
+
+  .cover-portrait-wrapper {
+    order: 1;
+    grid-column: span 2;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .cover-col-right {
+    order: 3;
+  }
+
+  .featured-memory-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .memories-masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .postcards-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .profile-scrapbook-cluster {
+    height: 440px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .lightbox-content {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .lightbox-img-wrap {
+    min-height: 280px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .header-container {
+    height: 58px;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background: #FFFDF9;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    border-bottom: 1px solid rgba(107, 31, 45, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .cover-monograph-frame {
+    padding: 1.25rem 0.85rem;
+    border-radius: 14px;
+  }
+
+  .cover-inner-matte {
+    padding: 1.25rem 1rem;
+  }
+
+  .cover-masthead-meta {
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.6875rem;
+  }
+
+  .cover-masthead-title {
+    font-size: 2.85rem;
+  }
+
+  .cover-stage {
+    aspect-ratio: 4/5;
+  }
+
+  .cover-callouts-overlay {
+    padding: 1.5rem;
+  }
+
+  .cover-hero-headline {
+    font-size: 1.85rem;
+  }
+
+  .cover-editorial-columns {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .cover-bottom-strip {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .note-scrap {
+    right: 15px;
+    top: 5px;
+  }
+
+  .envelope-box {
+    height: 270px;
+    max-width: 380px;
+  }
+
+  .envelope-box.opened .invitation-letter-card {
+    transform: translateY(-130px) scale(1);
+    padding: 1.5rem 1.25rem;
+  }
+
+  .letter-message {
+    font-size: 1.05rem;
+  }
+
+  .wax-seal-button {
+    width: 56px;
+    height: 56px;
+    top: 55%;
+  }
+
+  .wax-seal-text {
+    font-size: 1.25rem;
+  }
+
+  .tribute-prayer-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tribute-prayer-text {
+    font-size: 1.15rem;
+    line-height: 1.75;
+  }
+
+  .modal-header, .modal-footer {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .modal-body-scroll {
+    padding: 1.5rem;
+  }
+
+  .modal-letter-content {
+    font-size: 1.1rem;
+  }
+
+  .curator-panel {
+    width: 100%;
+    right: -100%;
+  }
+}

@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Diya Edit — Issue No. 21 | A Special Birthday Edition</title>
+    <meta name="description" content="An immersive luxury editorial birthday experience and interactive memory archive for Mardiya (Diya) turning 21 on 6 November 2026." />
+    <meta property="og:title" content="The Diya Edit — Issue No. 21" />
+    <meta property="og:description" content="For Diya, with all our love. A celebration of memories, sisterhood, and 21 years of grace." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Cormorant Garamond, DM Sans, Caveat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+
+    <!-- CDN Libraries: GSAP & Canvas Confetti -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+
+    <!-- ====================================================================
+         SECTION 00 — THE INVITATION (ANIMATED OPENING ENVELOPE)
+         ==================================================================== -->
+    <div id="invitation-screen" class="invitation-screen" role="dialog" aria-modal="true" aria-label="A special birthday invitation for Diya">
+      <div class="invitation-scene">
+        
+        <div class="invitation-header-note">
+          <p class="invitation-kicker">ISSUE NO. 21 · PRIVATE DELIVERY</p>
+          <p class="invitation-subtext">A handwritten treasure for someone irreplaceable...</p>
+        </div>
+
+        <!-- Fully Responsive Geometrically Sealed Envelope -->
+        <div id="envelope-box" class="envelope-box" title="Click to unseal your birthday invitation">
+          <div class="envelope-base">
+            
+            <!-- Envelope Cavity Background with Subtle Pattern -->
+            <div class="envelope-cavity">
+              <div class="envelope-cavity-pattern"></div>
+            </div>
+
+            <!-- Sliding Letter Card Hidden Inside Envelope Cavity -->
+            <div id="invitation-letter-card" class="invitation-letter-card">
+              <p class="letter-kicker">THE DIYA EDIT · SPECIAL EDITION NO. 21</p>
+              <p class="letter-message">
+                “Some people make life a little more beautiful simply by being in it.”
+              </p>
+              <p class="letter-note">
+                This little collection is for you, Diya. A celebration of the memories we’ve made, the moments we cherish, and the love that distance could never take away.
+              </p>
+              <div class="letter-actions-row">
+                <button id="open-surprise-btn" class="btn btn-primary">
+                  Open Your Surprise ♡
+                </button>
+                <button id="close-envelope-btn" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.65rem 1.25rem;">
+                  Fold Back ✉
+                </button>
+              </div>
+            </div>
+
+            <!-- Front Envelope Pocket (Left, Right, Bottom Vector Folds with Stitching & Script) -->
+            <div class="envelope-front-pocket">
+              <svg class="pocket-svg" viewBox="0 0 480 310" preserveAspectRatio="none">
+                <defs>
+                  <!-- Deep burgundy fold gradients -->
+                  <linearGradient id="leftFoldGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#591523" />
+                    <stop offset="100%" stop-color="#47101C" />
+                  </linearGradient>
+                  <linearGradient id="rightFoldGrad" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#541320" />
+                    <stop offset="100%" stop-color="#420D17" />
+                  </linearGradient>
+                  <linearGradient id="bottomFoldGrad" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#6E1F2E" />
+                    <stop offset="70%" stop-color="#5E1825" />
+                    <stop offset="100%" stop-color="#50121E" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Left triangular fold -->
+                <polygon points="0,0 240,155 0,310" fill="url(#leftFoldGrad)" />
+
+                <!-- Right triangular fold -->
+                <polygon points="480,0 240,155 480,310" fill="url(#rightFoldGrad)" />
+
+                <!-- Bottom triangular fold meeting at center -->
+                <polygon points="0,310 240,140 480,310" fill="url(#bottomFoldGrad)" filter="drop-shadow(0 -4px 6px rgba(25,5,10,0.3))" />
+
+                <!-- Perimeter Gold Stitching -->
+                <rect x="8" y="8" width="464" height="294" rx="10" fill="none" stroke="rgba(250, 158, 188, 0.35)" stroke-dasharray="6 4" stroke-width="1.2" />
+
+                <!-- Calligraphy on Bottom Pocket -->
+                <text x="240" y="245" text-anchor="middle" font-family="'Caveat', cursive" font-size="34" font-weight="600" fill="#FCE8F0" letter-spacing="1">
+                  For Mardiya ♡
+                </text>
+                <text x="240" y="275" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10.5" font-weight="700" fill="#E7C98A" letter-spacing="3.5">
+                  TAP SEAL TO UNLOCK
+                </text>
+              </svg>
+            </div>
+
+            <!-- Top Flap (Triangular Vector Flap Folded DOWN over the pocket) -->
+            <div id="envelope-top-flap" class="envelope-top-flap">
+              <svg class="flap-svg" viewBox="0 0 480 185" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="flapOuterGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#7B2435" />
+                    <stop offset="70%" stop-color="#6B1F2D" />
+                    <stop offset="100%" stop-color="#5A1523" />
+                  </linearGradient>
+                </defs>
+                <!-- Flap pointing down to point (240, 180) -->
+                <polygon points="0,0 480,0 240,180" fill="url(#flapOuterGrad)" />
+                <!-- Flap inner dashed stitching -->
+                <polyline points="14,10 240,170 466,10" fill="none" stroke="rgba(250, 158, 188, 0.4)" stroke-dasharray="6 4" stroke-width="1.2" />
+              </svg>
+            </div>
+
+            <!-- Pink Wax Seal Affixed Right At the Apex of the Closed Flap -->
+            <button id="wax-seal-button" class="wax-seal-button" aria-label="Break wax seal and open envelope">
+              <span class="wax-seal-text">M</span>
+              <div class="wax-seal-ribbon-tail"></div>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         TOP BAR NAVIGATION (Strict 3-zone contract)
+         ==================================================================== -->
+    <header class="site-header">
+      <div class="container header-container">
+        
+        <!-- Zone 1: Single text element wordmark -->
+        <a href="#the-diya-edit" class="brand-mark">
+          THE DIYA EDIT
+          <span>ISSUE NO. 21</span>
+        </a>
+
+        <!-- Zone 2: 4-5 concise single-line nav links -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#the-diya-edit" class="nav-link active">Cover</a></li>
+            <li><a href="#the-girl" class="nav-link">The Girl</a></li>
+            <li><a href="#soul-moments" class="nav-link">Soul Moments</a></li>
+            <li><a href="#four-hearts" class="nav-link">Four Hearts</a></li>
+            <li><a href="#across-the-miles" class="nav-link">Across The Miles</a></li>
+            <li><a href="#a-new-chapter" class="nav-link">A New Chapter</a></li>
+          </ul>
+        </nav>
+
+        <!-- Zone 3: 1 primary action -->
+        <div class="header-action">
+          <button class="btn btn-primary celebrate-btn" style="padding: 0.5rem 1.25rem; font-size: 0.75rem;">
+            Celebrate 21 ✨
+          </button>
+          <button class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SECTION 01 — THE COVER STORY (LUXURY VOGUE-STYLE EDITORIAL COVER)
+         ==================================================================== -->
+    <section id="the-diya-edit" class="section-cover">
+      <div class="container">
+        <div class="cover-monograph-frame">
+          <div class="cover-inner-matte">
+            
+            <!-- Top Masthead Banner -->
+            <div class="cover-masthead-header">
+              <div class="cover-masthead-meta">
+                <span>ISSUE NO. 21 · COLLECTOR’S EDITION</span>
+                <span>06 NOVEMBER 2026</span>
+                <span>ACCRA & BEYOND</span>
+              </div>
+              <h1 class="cover-masthead-title">THE DIYA EDIT</h1>
+              <p class="cover-masthead-subline">For Diya, with all our love.</p>
+            </div>
+
+            <!-- Grand Central Editorial Stage with Diya's Portrait & Romantic Overlays -->
+            <div class="cover-stage">
+              <img id="cover-portrait-img" class="cover-portrait-bg" src="assets/images/diya/cover.jpg" alt="Mardiya (Diya) — The Diya Edit Cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=85';" />
+              
+              <!-- Gradient Contrast Scrim -->
+              <div class="cover-stage-scrim"></div>
+
+              <!-- Foreground Typography & Cover Lines -->
+              <div class="cover-callouts-overlay">
+                <div class="cover-main-headline-group">
+                  <span class="cover-headline-kicker">A CELEBRATION OF 21 YEARS</span>
+                  <h2 class="cover-hero-headline">“Twenty-One Looks Beautiful On You.”</h2>
+                  <p class="cover-hero-tagline">The girl worth celebrating · A rare kind of beautiful</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Editorial Feature Columns Below the Stage -->
+            <div class="cover-editorial-columns">
+              <div class="editorial-col-item">
+                <span class="col-kicker">FEATURE 01 · PROFILE</span>
+                <h3 class="col-title">The Girl Behind The Name</h3>
+                <p class="col-prose">A genuine heart, a spirit rooted in faith, and a kindness that speaks louder than words.</p>
+              </div>
+
+              <div class="editorial-col-item">
+                <span class="col-kicker">FEATURE 02 · ARCHIVE</span>
+                <h3 class="col-title">The Kenkey Chronicles</h3>
+                <p class="col-prose">Breaking bounds, sharing meals, and the secondary school laughter distance could never dim.</p>
+              </div>
+
+              <div class="editorial-col-item">
+                <span class="col-kicker">FEATURE 03 · LETTERS</span>
+                <h3 class="col-title">Four Voices, One Sister</h3>
+                <p class="col-prose">Complete birthday letters from Matilda, Phyllis, Franca, and Vanessa.</p>
+              </div>
+            </div>
+
+            <!-- Bottom Editorial Monograph Bar -->
+            <div class="cover-bottom-strip">
+              <div class="editorial-barcode-box">
+                <div class="barcode-lines"></div>
+                <div class="barcode-text">
+                  <div>ISSN 2026-1106</div>
+                  <div>PRICELESS / WITH ALL OUR LOVE</div>
+                </div>
+              </div>
+
+              <a href="#the-girl" class="cover-cta-anchor">
+                <span>Explore The Archive</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 02 — THE GIRL BEHIND THE NAME (PORTRAIT PROFILE)
+         ==================================================================== -->
+    <section id="the-girl" class="section-girl">
+      <div class="container">
+        <div class="profile-layout">
+          
+          <!-- Left: Scrapbook Polaroid & Note Cluster -->
+          <div class="profile-scrapbook-cluster">
+            
+            <!-- Sticky Note Scrap -->
+            <div class="note-scrap">
+              <p class="note-scrap-text">
+                "Our prayerful, deen-loving sister. A soul wrapped in barakah."
+              </p>
+            </div>
+
+            <!-- Dominant Polaroid Frame -->
+            <div class="polaroid-main">
+              <div class="polaroid-photo">
+                <img id="profile-portrait-img" src="assets/images/diya/profile.jpg" alt="Mardiya (Diya)" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80';" />
+              </div>
+              <p class="polaroid-caption">Mardiya · 21</p>
+            </div>
+
+            <!-- Smaller Overlapping Supporting Polaroid -->
+            <div class="polaroid-sub">
+              <div class="polaroid-photo" style="aspect-ratio: 1/1;">
+                <img src="assets/images/memories/golden-glow.jpg" alt="Candid Memory" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80';" />
+              </div>
+              <p class="polaroid-caption" style="font-size: 1.15rem;">The Girl Worth Celebrating</p>
+            </div>
+
+          </div>
+
+          <!-- Right: Profile Editorial Copy -->
+          <div class="profile-content">
+            <span class="section-kicker">01 · THE GIRL BEHIND THE NAME</span>
+            <h2 class="section-title">A rare kind of beautiful.</h2>
+
+            <div class="defining-words">
+              <span>SELFLESS</span>
+              <span class="bullet">·</span>
+              <span>GENUINE</span>
+              <span class="bullet">·</span>
+              <span>KINDHEARTED</span>
+            </div>
+
+            <p class="profile-prose">
+              Some people have a way of making everyone around them feel seen, remembered and loved. Diya is one of those people.
+            </p>
+
+            <p class="profile-prose">
+              A genuine heart, a beautiful spirit, and a kindness that speaks louder than words. From secondary school corridors to navigating miles apart, she remains the friend who shows up, who checks in when life gets noisy, and who holds onto her faith with inspiring devotion.
+            </p>
+
+            <blockquote class="profile-quote">
+              “To say you’re an amazing friend is an understatement; honestly, everyone deserves a Diya and we are so blessed we have ours.”
+            </blockquote>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 03 — SOUL MOMENTS (THE SCRAPBOOK MEMORY ARCHIVE)
+         ==================================================================== -->
+    <section id="soul-moments" class="section-memories">
+      <div class="container">
+        
+        <div class="memories-header">
+          <span class="section-kicker">02 · THE MEMORY ARCHIVE</span>
+          <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem);">SOUL MOMENTS</h2>
+          <p class="memories-subheading">“The little things became the memories we kept.”</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div id="memory-filter-tabs" class="filter-tabs"></div>
+
+        <!-- Featured Spotlight: THE KENKEY CHRONICLES -->
+        <div id="featured-kenkey-container"></div>
+
+        <!-- Scrapbook Polaroid Masonry Grid -->
+        <div id="memories-grid" class="memories-masonry"></div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 04 — FOUR HEARTS, ONE SPECIAL GIRL (LETTER COLLECTION)
+         ==================================================================== -->
+    <section id="four-hearts" class="section-letters">
+      <div class="container">
+        
+        <div class="letters-header">
+          <span class="section-kicker">03 · THE LETTER COLLECTION</span>
+          <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem);">FOUR HEARTS, ONE SPECIAL GIRL</h2>
+          <p class="letters-subheading">“Four voices. One very loved girl.”</p>
+        </div>
+
+        <!-- 4 Distinct Stationery Cards -->
+        <div id="letters-grid-container" class="letters-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 05 — ACROSS THE MILES (POSTCARD COMPOSITION)
+         ==================================================================== -->
+    <section id="across-the-miles" class="section-postcards">
+      <div class="container">
+        
+        <div class="postcards-header">
+          <span class="section-kicker">04 · LITTLE REMINDERS FROM HOME</span>
+          <h2 class="section-title" style="font-size: clamp(2.5rem, 5vw, 3.8rem);">ACROSS THE MILES</h2>
+          <p class="postcards-subheading">“Distance means so little when someone means so much.”</p>
+        </div>
+
+        <!-- Vintage Postcard Grid -->
+        <div id="postcards-grid-container" class="postcards-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 06 — A NEW CHAPTER (DRAMATIC BURGUNDY TRIBUTE)
+         ==================================================================== -->
+    <section id="a-new-chapter" class="section-tribute">
+      <div class="container">
+        
+        <div class="tribute-box">
+          <p class="tribute-kicker">05 · THE FINAL TRIBUTE</p>
+          <h2 class="tribute-headline">A NEW CHAPTER BEGINS</h2>
+          <p class="tribute-subheading">“May 21 be as beautiful as everything you are becoming.”</p>
+
+          <div class="tribute-prayer-card">
+            <p class="tribute-prayer-text">Dear Diya,
+
+Twenty-one looks beautiful on you.
+
+May Allah bless your new chapter with ease, endless barakah and beautiful opportunities. May your hard work bear fruit, your silent prayers find answers and your heart always find reasons to be grateful.
+
+May you continue to grow, flourish and become everything you are meant to be.
+
+Never forget how deeply you are loved.
+
+Happy 21st birthday, Mardiya.
+
+Until the next reunion, the next laughter, the next gist and the next kenkey date.
+
+With all our love, always.</p>
+
+            <p class="tribute-signoff">— Matilda, Phyllis, Franca & Vanessa ♡</p>
+          </div>
+
+          <div class="tribute-actions">
+            <button class="btn btn-tribute-primary celebrate-btn">
+              Send Love & Blessings ✨
+            </button>
+            <button id="replay-journey-btn" class="btn btn-tribute-secondary">
+              Replay Our Little World ✉️
+            </button>
+          </div>
+
+          <div class="tribute-footer-notice">
+            <p>THE END OF THIS EDITION · THE BEGINNING OF ANOTHER BEAUTIFUL CHAPTER</p>
+            <p style="margin-top: 0.5rem; opacity: 0.7;">THE DIYA EDIT · ISSUE NO. 21 · 06 NOVEMBER 2026</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MODAL: FULL LETTER STATIONERY READER
+         ==================================================================== -->
+    <div id="letter-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="letter-modal-paper">
+        
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="author-avatar" style="width: 50px; height: 50px;">
+              <img id="modal-author-avatar" src="" alt="Author" />
+              <div class="author-avatar-initial" style="display:none;"></div>
+            </div>
+            <div>
+              <h3 id="modal-author-name" class="font-serif" style="font-size: 1.5rem; color: var(--color-burgundy); line-height: 1.1;"></h3>
+              <span id="modal-author-role" style="font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-gold); font-weight: 700;"></span>
+            </div>
+          </div>
+
+          <button id="modal-close-button" class="modal-close-btn" aria-label="Close Letter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body-scroll">
+          <h4 id="modal-title" class="modal-letter-title"></h4>
+          <div id="modal-letter-content" class="modal-letter-content"></div>
+        </div>
+
+        <div class="modal-footer">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-burgundy); font-weight: 600;">
+            THE DIYA EDIT · PERSONAL ARCHIVE
+          </span>
+          <button id="modal-audio-btn" class="btn btn-secondary" style="padding: 0.4rem 1.1rem; font-size: 0.75rem;">
+            Play Voice Note 🎙️
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         MODAL: HIGH-RESOLUTION LIGHTBOX
+         ==================================================================== -->
+    <div id="lightbox-modal" class="lightbox-overlay" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-content">
+        <div class="lightbox-img-wrap">
+          <img id="lightbox-image" src="" alt="Memory Frame" />
+        </div>
+        <div class="lightbox-details">
+          <div>
+            <div id="lightbox-meta" class="meta-row" style="margin-bottom: 0.75rem;"></div>
+            <h3 id="lightbox-title" class="lightbox-title"></h3>
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+            <div id="lightbox-note" class="lightbox-note"></div>
+          </div>
+          <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+            <button id="lightbox-close" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.75rem;">
+              Close Frame
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         CURATOR'S STUDIO (PHOTO MANAGER DRAWER FOR FRIENDS)
+         ==================================================================== -->
+    <div class="curator-drawer">
+      <button id="curator-toggle-btn" class="curator-toggle-btn" title="Add or preview your real photos">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+          <circle cx="12" cy="13" r="4"></circle>
+        </svg>
+        Personalize Photos
+      </button>
+    </div>
+
+    <aside id="curator-panel" class="curator-panel" aria-label="Curator Photo Studio">
+      <div class="curator-panel-header">
+        <div>
+          <h4 class="font-serif" style="font-size: 1.35rem; color: var(--color-burgundy);">Curator’s Studio</h4>
+          <span style="font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold);">
+            Drop Your Real Photos
+          </span>
+        </div>
+        <button id="curator-close-btn" class="modal-close-btn" aria-label="Close Studio">✕</button>
+      </div>
+
+      <div class="curator-panel-body">
+        <p style="font-size: 0.8125rem; color: var(--color-ink-muted); margin-bottom: 1.5rem; line-height: 1.6;">
+          You can test and preview your real photographs right here in the browser! Or simply place them in the project’s <code>assets/images/</code> folder.
+        </p>
+
+        <!-- Slots -->
+        <div class="upload-slot">
+          <div class="upload-slot-thumb">
+            <img id="curator-thumb-cover" src="assets/images/diya/cover.jpg" alt="Cover" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80';" />
+          </div>
+          <div style="flex:1;">
+            <p class="upload-slot-label">Cover Portrait (Diya)</p>
+            <p class="upload-slot-path">assets/images/diya/cover.jpg</p>
+            <input type="file" class="curator-file-input" data-slot="cover" accept="image/*" style="font-size: 0.75rem; margin-top: 0.4rem;" />
+          </div>
+        </div>
+
+        <div class="upload-slot">
+          <div class="upload-slot-thumb">
+            <img id="curator-thumb-diya_profile" src="assets/images/diya/profile.jpg" alt="Profile" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80';" />
+          </div>
+          <div style="flex:1;">
+            <p class="upload-slot-label">Profile Polaroid (Diya)</p>
+            <p class="upload-slot-path">assets/images/diya/profile.jpg</p>
+            <input type="file" class="curator-file-input" data-slot="diya_profile" accept="image/*" style="font-size: 0.75rem; margin-top: 0.4rem;" />
+          </div>
+        </div>
+
+        <div class="upload-slot">
+          <div class="upload-slot-thumb">
+            <img id="curator-thumb-matilda" src="assets/images/friends/matilda.jpg" alt="Matilda" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80';" />
+          </div>
+          <div style="flex:1;">
+            <p class="upload-slot-label">Matilda’s Portrait</p>
+            <p class="upload-slot-path">assets/images/friends/matilda.jpg</p>
+            <input type="file" class="curator-file-input" data-slot="matilda" accept="image/*" style="font-size: 0.75rem; margin-top: 0.4rem;" />
+          </div>
+        </div>
+
+        <div class="upload-slot">
+          <div class="upload-slot-thumb">
+            <img id="curator-thumb-phyllis" src="assets/images/friends/phyllis.jpg" alt="Phyllis" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80';" />
+          </div>
+          <div style="flex:1;">
+            <p class="upload-slot-label">Phyllis’s Portrait</p>
+            <p class="upload-slot-path">assets/images/friends/phyllis.jpg</p>
+            <input type="file" class="curator-file-input" data-slot="phyllis" accept="image/*" style="font-size: 0.75rem; margin-top: 0.4rem;" />
+          </div>
+        </div>
+
+        <div class="upload-slot">
+          <div class="upload-slot-thumb">
+            <img id="curator-thumb-franca" src="assets/images/friends/franca.jpg" alt="Franca" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80';" />
+          </div>
+          <div style="flex:1;">
+            <p class="upload-slot-label">Franca’s Portrait</p>
+            <p class="upload-slot-path">assets/images/friends/franca.jpg</p>
+            <input type="file" class="curator-file-input" data-slot="franca" accept="image/*" style="font-size: 0.75rem; margin-top: 0.4rem;" />
+          </div>
+        </div>
+
+        <div class="upload-slot">
+          <div class="upload-slot-thumb">
+            <img id="curator-thumb-vanessa" src="assets/images/friends/vanessa.jpg" alt="Vanessa" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80';" />
+          </div>
+          <div style="flex:1;">
+            <p class="upload-slot-label">Vanessa’s Portrait</p>
+            <p class="upload-slot-path">assets/images/friends/vanessa.jpg</p>
+            <input type="file" class="curator-file-input" data-slot="vanessa" accept="image/*" style="font-size: 0.75rem; margin-top: 0.4rem;" />
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <button id="curator-reset-btn" class="btn btn-secondary" style="width: 100%; font-size: 0.75rem;">
+            Reset Custom Uploads
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Module Script -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

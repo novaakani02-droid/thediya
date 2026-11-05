@@ -1,0 +1,6 @@
+{
+  "name": "The Diya Edit — Issue No. 21",
+  "description": "An immersive luxury editorial birthday experience and interactive memory archive for Mardiya (Diya) turning 21.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1010 @@
+# PROJECT: THE DIYA EDIT — ISSUE NO. 21
+## An Immersive Digital Birthday Experience | Luxury Editorial × Interactive Memory Archive
+
+### YOUR ROLE
+
+Act as an award-winning senior frontend developer with 20 years of experience, an exceptional creative director, luxury editorial designer, UI/UX designer, digital scrapbook artist and interaction designer.
+
+Your task is to conceptualize, design and develop a visually extraordinary, emotionally compelling, fully responsive birthday website for a young woman named **Mardiya, affectionately known as Diya**, who is turning 21 on 6 November 2026.
+
+This website is a birthday gift created by four of her closest friends.
+
+The experience must feel personal, sophisticated, emotional, artistic, beautifully curated and exceptionally well executed.
+
+Do not create a generic birthday website.
+
+Do not create a conventional magazine website.
+
+Do not create a basic scrapbook template.
+
+Instead, combine the strongest elements of:
+
+- A luxury fashion and lifestyle editorial.
+- A beautifully handcrafted physical scrapbook.
+- An interactive digital memory archive.
+- A collection of personal letters and postcards.
+- An immersive storytelling website.
+
+The title of the experience is:
+
+# THE DIYA EDIT
+### ISSUE NO. 21
+*For Diya, with all our love.*
+
+The website should tell a story through photographs, visual compositions, interactions, typography, memories, personal messages and subtle animations.
+
+The storytelling and experience must work together. The magazine identity should establish the visual direction, while the memory archive and scrapbook elements provide the emotional depth.
+
+---
+
+# 1. TECHNICAL REQUIREMENTS
+
+Build the website using:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+Do not use React, Next.js, Vue, Angular or other frontend frameworks.
+
+Do not use a backend or database.
+
+The website should be a self-contained frontend project that can be developed locally in VS Code and deployed using GitHub Pages or Vercel.
+
+You may use lightweight libraries through CDN links when genuinely beneficial, particularly:
+
+- GSAP for sophisticated animations.
+- Google Fonts for typography.
+- Lucide icons for minimal interface icons.
+
+Avoid unnecessary dependencies.
+
+### Development expectations
+
+1. Write clean, modular, maintainable HTML, CSS and JavaScript.
+2. Separate the HTML, CSS and JavaScript into appropriate files.
+3. Use reusable components and JavaScript rendering functions where appropriate.
+4. Organize photographs, audio files and videos into dedicated folders.
+5. Store repeatable content such as friendship letters and memory entries in JavaScript data objects.
+6. Make it easy to add or replace photographs without modifying the entire website.
+7. Ensure all interactive elements work.
+8. Do not use nonfunctional buttons or decorative elements that falsely suggest interactivity.
+9. Ensure all assets have correct local paths.
+10. Provide complete working code, not pseudocode or incomplete snippets.
+
+Suggested project structure:
+
+the-diya-edit/
+- index.html
+- css/
+  - style.css
+  - animations.css
+  - responsive.css
+- js/
+  - main.js
+  - animations.js
+  - letters.js
+  - memories.js
+  - gallery.js
+- assets/
+  - images/
+    - diya/
+    - friends/
+    - memories/
+    - scrapbook/
+  - audio/
+  - videos/
+  - textures/
+  - icons/
+
+The architecture may be adjusted when necessary, but maintain this separation of concerns.
+
+---
+
+# 2. CREATIVE DIRECTION AND DESIGN IDENTITY
+
+## The central aesthetic
+
+LUXURY EDITORIAL × ELEGANT DIGITAL SCRAPBOOK × MEMORY ARCHIVE.
+
+The website should look as though a luxury creative studio designed a physical friendship memory book and transformed it into an interactive digital experience.
+
+The overall appearance should be:
+
+- Rich.
+- Elegant.
+- Feminine without being excessively girly.
+- Warm.
+- Nostalgic.
+- Artistic.
+- Emotionally intimate.
+- Editorial.
+- Premium.
+- Hyperrealistic in its visual presentation.
+
+The design must feel intentionally art-directed.
+
+Think of luxury magazine layouts, beautifully arranged Polaroid photographs, real paper textures, layered stationery, delicate ribbons, wax seals, vintage postcards, handwritten annotations and elegant editorial photography.
+
+The scrapbook details must feel believable and carefully positioned.
+
+Do not scatter random decorations across the interface.
+
+Every decorative element should contribute to the storytelling.
+
+## 3. OFFICIAL COLOUR PALETTE
+
+Use these exact colours throughout the website.
+
+| Colour | HEX | Purpose |
+|---|---|---|
+| White | #FFFFFF | Clean editorial backgrounds |
+| Deep Burgundy | #6B1F2D | Primary brand colour, dramatic sections, typography |
+| Warm Beige | #E6D8C7 | Paper backgrounds, scrapbook surfaces, cards |
+| Soft Pink | #FA9EBC | Delicate accents, wax seals, tiny details |
+
+Burgundy must establish the identity of the website.
+
+Beige and white should provide visual breathing room.
+
+Pink should be used selectively for feminine accents, annotations, decorative details and small highlights.
+
+Do not allow pink to overpower the burgundy.
+
+You may introduce subtle champagne or muted gold detailing for tiny metallic accents, but do not introduce additional dominant colours.
+
+### Colour distribution
+
+Use a sophisticated mixture of:
+
+- Warm beige and ivory for the main canvas.
+- Burgundy for dramatic sections and important headings.
+- White for photography frames and editorial layouts.
+- Pink for selected decorative accents.
+
+Alternate the backgrounds thoughtfully.
+
+Not every section should look identical.
+
+---
+
+# 4. TYPOGRAPHY
+
+Typography is a major part of the design.
+
+Use an elegant editorial serif for large headlines, paired with a clean modern sans-serif for body text.
+
+Suggested fonts:
+
+- Cormorant Garamond — major headings and emotional statements.
+- DM Sans — body text and interface elements.
+- Caveat — occasional handwritten annotations and scrapbook captions.
+
+Typography should be expressive but highly readable.
+
+Use:
+
+- Large editorial headings.
+- Delicate italic serif text.
+- Beautifully spaced uppercase labels.
+- Small handwritten annotations.
+- Short, intentional captions.
+
+Avoid oversized body text, excessive bold text and too many competing fonts.
+
+The typography should make the website feel like a premium publication.
+
+---
+
+# 5. VISUAL QUALITY REQUIREMENTS
+
+This is one of the most important instructions.
+
+The finished website must look exceptionally polished, with a hyperrealistic, high-resolution, 4K-inspired visual aesthetic.
+
+Interpret 4K quality as premium visual presentation, sharp photography, fine details, sophisticated textures and excellent rendering.
+
+Do not simply apply CSS filters to make everything look luxurious.
+
+Use realistic visual assets and carefully composed layouts.
+
+### Photography
+
+The photographs of Diya and her friends must remain the visual centrepiece.
+
+Use the actual supplied photographs.
+
+Never replace the real people with AI-generated faces.
+
+Never distort, regenerate, beautify or alter their identities.
+
+Preserve their natural appearance.
+
+Design around the available photographs instead of forcing every photograph into the same template.
+
+### Scrapbook details
+
+Incorporate realistic visual details such as:
+
+- Layered paper.
+- Torn paper edges.
+- Polaroid frames.
+- Realistic washi tape.
+- Paper clips.
+- Subtle paper shadows.
+- Pressed flowers.
+- Handwritten notes.
+- Vintage stamps.
+- Postcards.
+- Envelope flaps.
+- Wax seals.
+- Small doodles.
+- Delicate ribbons.
+- Photo corners.
+- Paper textures.
+- Subtle film grain.
+
+Use these elements selectively.
+
+The result should resemble an expensive, beautifully curated memory book, not a childish craft project.
+
+### Rounded containers
+
+Use beautifully rounded card containers throughout the website.
+
+Cards should have refined corner radii, approximately 14–24px depending on their size and purpose.
+
+Use:
+
+- Soft rounded corners for photographs.
+- Rounded editorial cards.
+- Rounded letter containers.
+- Rounded video frames.
+- Rounded navigation elements.
+
+Do not make every element excessively pill-shaped.
+
+Balance rounded surfaces with elegant rectangular editorial compositions.
+
+Use subtle shadows, fine borders and realistic depth.
+
+Avoid thick borders, harsh shadows and generic dashboard-style cards.
+
+---
+
+# 6. WEBSITE STRUCTURE AND STORYTELLING
+
+The website should be a single-page scrolling experience with distinct editorial chapters.
+
+It should feel like moving through a beautifully curated memory archive.
+
+The navigation should be minimal and elegant.
+
+Every section must have its own visual composition while maintaining the same overall visual identity.
+
+Do not repeat the same layout in every section.
+
+The website must tell a coherent emotional story from beginning to end.
+
+## SECTION 00 — THE INVITATION
+
+### The animated opening envelope
+
+This is the first interaction Diya experiences.
+
+Create an exceptionally beautiful opening screen.
+
+The background should be warm beige or soft ivory.
+
+At the centre of the screen should be a realistic, richly coloured burgundy envelope.
+
+The envelope should have:
+
+- Elegant paper texture.
+- Soft realistic shadows.
+- Her name written on the front.
+- A delicate pink wax seal.
+- A subtle handwritten annotation.
+
+Text on the envelope:
+
+FOR MARDIYA ♡
+
+The envelope should feel like a physical invitation that has been carefully prepared for her.
+
+### Interaction
+
+1. The envelope gently appears.
+2. It settles into the centre of the screen.
+3. A subtle animation draws attention to the wax seal.
+4. The user clicks or taps the envelope.
+5. The flap opens realistically.
+6. A letter slides out.
+7. The letter reveals a short introductory message.
+8. A transition leads into the main website.
+
+Opening message:
+
+"Some people make life a little more beautiful simply by being in it.
+
+This little collection is for you, Diya. A celebration of the memories we've made, the moments we cherish and the love that distance could never take away."
+
+Button:
+
+OPEN YOUR SURPRISE ♡
+
+The interaction must work on desktop and mobile.
+
+Do not automatically play music.
+
+---
+
+## SECTION 01 — THE COVER STORY
+
+### THE DIYA EDIT — ISSUE NO. 21
+
+This section introduces the identity of the birthday experience.
+
+Create a luxury editorial magazine-cover composition.
+
+Use a beautiful supplied portrait of Diya as the main visual.
+
+The composition should include:
+
+THE DIYA EDIT
+
+ISSUE NO. 21
+
+A SPECIAL BIRTHDAY EDITION
+
+Main headline:
+
+TWENTY-ONE LOOKS BEAUTIFUL ON YOU.
+
+Additional editorial text may include:
+
+- The girl worth celebrating.
+- A rare kind of beautiful.
+- A heart that makes room for everyone.
+
+Keep the cover sophisticated.
+
+Use oversized serif typography, carefully positioned text and a beautiful photographic composition.
+
+The layout should feel like a luxury fashion magazine cover, not a conventional birthday invitation.
+
+Add a subtle scrolling cue inviting her to explore the memories.
+
+---
+
+## SECTION 02 — THE GIRL BEHIND THE NAME
+
+### A portrait-led introduction to Diya.
+
+This section should celebrate Mardiya's personality without turning into a long biography.
+
+Use one dominant portrait and smaller complementary photographs.
+
+The three defining words are:
+
+SELFLESS. GENUINE. KINDHEARTED.
+
+Suggested editorial copy:
+
+"Some people have a way of making everyone around them feel seen, remembered and loved.
+
+Diya is one of those people.
+
+A genuine heart, a beautiful spirit and a kindness that speaks louder than words."
+
+Design direction:
+
+- Large portrait photography.
+- Elegant editorial text.
+- Small overlapping Polaroid photographs.
+- Handwritten annotations.
+- Minimal decorative details.
+- Beautiful spacing.
+
+This should look like a carefully designed magazine profile.
+
+---
+
+## SECTION 03 — SOUL MOMENTS
+
+### THE MEMORY ARCHIVE
+
+This is one of the most important sections of the website.
+
+It should be a visually rich, immersive digital scrapbook.
+
+Heading:
+
+SOUL MOMENTS
+
+Supporting line:
+
+"The little things became the memories we kept."
+
+This section should contain photographs from Diya's life and friendships.
+
+There are individual photographs of Diya and photographs of her with different friends.
+
+There is no requirement for a photograph featuring all four friends together.
+
+Design a flexible photographic composition that accommodates:
+
+- Individual portraits.
+- Two-person photographs.
+- Group photographs.
+- Secondary-school memories.
+- Random candid photographs.
+- Short videos.
+
+### Photo presentation
+
+Do not use an ordinary uniform grid.
+
+Create an editorial scrapbook composition containing:
+
+- Different-sized Polaroid photographs.
+- Slightly rotated photographs.
+- Overlapping image frames.
+- Small handwritten captions.
+- Memory labels.
+- Paper clips and washi tape.
+- Fine paper textures.
+- Soft realistic shadows.
+
+Each photograph should have its own intentional placement.
+
+Some photographs can be large and dominant, while others should appear as smaller supporting memories.
+
+### Interactive behaviour
+
+- Photographs should respond subtly to hover or touch.
+- Clicking a photograph should open a larger lightbox.
+- Users should be able to close the lightbox easily.
+- Captions should appear elegantly.
+- Video memories should be playable.
+- The gallery should adapt to different numbers and proportions of photographs.
+
+### Featured memory — THE KENKEY CHRONICLES
+
+One of Diya's friends shared a special secondary-school memory.
+
+They used to break bounds just to go out and buy kenkey together, eat together and spend time chatting.
+
+This deserves a dedicated scrapbook feature.
+
+Heading:
+
+THE KENKEY CHRONICLES.
+
+Supporting copy:
+
+"Breaking bounds, buying kenkey, sharing a meal and having the longest conversations.
+
+Some memories become special because of how ordinary they seemed at the time."
+
+Use a beautiful photographic composition inspired by this memory.
+
+You may use a relevant Ghanaian food photograph as a supporting decorative image if no personal photograph exists.
+
+Do not pretend a stock image is an actual memory photograph.
+
+Include a little label:
+
+SHS DAYS · A MEMORY TO KEEP.
+
+This detail should bring personality and Ghanaian context into the experience.
+
+---
+
+## SECTION 04 — FOUR HEARTS, ONE SPECIAL GIRL
+
+### THE LETTER COLLECTION
+
+This section contains the complete birthday messages written by Diya's four friends:
+
+- Matilda.
+- Phyllis.
+- Franca.
+- Vanessa.
+
+Heading:
+
+FOUR HEARTS, ONE SPECIAL GIRL.
+
+Supporting line:
+
+"Four voices. One very loved girl."
+
+Each friend must have:
+
+1. Her individual photograph.
+2. Her name.
+3. A beautifully designed letter card.
+4. Her complete original birthday message.
+5. An optional voice note.
+
+### Visual presentation
+
+Do not display all four letters in a plain vertical text list.
+
+Create four beautiful individual letter cards.
+
+Each card should look like an elegant piece of stationery.
+
+Use:
+
+- Warm beige paper surfaces.
+- Burgundy headings.
+- Rounded card corners.
+- Fine paper textures.
+- Small pink wax-seal details.
+- Handwritten-style annotations.
+- Realistic shadows.
+
+Each friend's photograph should be clearly visible.
+
+### Letter interaction
+
+When Diya selects a friend's card:
+
+- The card should expand or open.
+- A beautifully typeset letter should appear.
+- The friend's photograph and name should remain visible.
+- The entire original message should be readable.
+- A voice-note player should appear only if an audio file has been supplied.
+
+Voice-note controls should include:
+
+- Play/pause.
+- Progress indicator.
+- Duration.
+- Accessible controls.
+
+Audio must never play automatically.
+
+### IMPORTANT: Preserve the original messages.
+
+Use the following supplied messages in full. Do not summarize, shorten, invent additional memories or change the writers' personalities.
+
+#### LETTER 01 — MATILDA
+
+Title: CELEBRATING A RARE GEM
+
+"Happy birthday my love …. I don’t really know where to start from but let’s hear what my heart has to say…. Happy birthday Mardiya , I thank Allah for adding one more year to you.
+
+To say you’re an amazing friend is an understatement , honestly everyone deserves a Diya and I’m glad I have mine . I miss you so much you have no idea,I miss the gisting, I miss laughing together, I miss the kind gestures and I can go on and on and on .
+
+21 already looks good on you love and this is a prayer for you , I see you pushing , I see you going all out and I pray Allah blesses the work of your hands may your your name be mentioned in rooms where you’re not present, you’ll reap what you sow and you’ll go places you never thought of, you’ll excel academically and I’ll be here to cheer you on love
+
+If you were here we’d probably throw a bigger party and toast to more years together for now these are words of encouragement, CONTINUE YOUR GOOD WORK AND YOUR REWARD IS COMING.
+
+Allow yourself to be loved , and embrace all the good things happening in your life because you deserve each and everyone of them Mardiya.You’ll be great my love and I can’t wait to see what you’ll do with all that greatness.
+
+I could go on and on and on and on about how selfless and loving you are but I’m going to end here 🙈. I love you so much my love .HAPPY BIRTHDAY MARDIYA 🥹💕.Have a good year ahead 🫂"
+
+#### LETTER 02 — PHYLLIS
+
+"Happy birthday, my love 🥺❤️. From SHS till now, look at us. Years have passed, distance came but you are still one of the few people I can boldly call MY FRIEND. And I don't take that for granted at all.
+
+You are that friend, Diya. That friend who shows up, who laughs with you, checks up on you. You show love to everyone around you so genuinely. That means so much to me, more than you know.
+
+I still remember the last time I saw you before you left, I wish I could replay that day.
+
+What I love and admire most is how you take Allah so serious, how you hold your deen. So prayerful, so beautiful inside and out. You inspire me, Diya.
+
+I pray Allah blesses your new age with ease and endless barakah. May He increase you in knowledge, in beauty and in grace. May He crown all your hard work with massive success and open beautiful doors for you. May He answer all your silent prayers in the best way and surround you with genuine love, the same kind of love you give to all of us.
+
+May you never lack, may you never lose your beautiful light. You deserve the world and more.
+
+Thank you for being my friend. Thank you for showing up even when miles apart.
+
+I love you so much, and I miss you more.
+
+Keep glowing, keep pushing.
+
+Happy Birthday, prettyyy 🎂❤️"
+
+#### LETTER 03 — FRANCA
+
+"Happy birthday to my girl and one of the biggest blessings life has given me 🥹❤️
+
+Honestly, I don’t even know how to put into words how much you mean to me. From SHS till now you have shown me a kind of friendship I never knew I could experience.
+
+You have loved me like family, cared for me like a sister and stood by me in ways I will never forget.
+
+The way you show concern, check up on me and even go out of your way to support me and my family means more than you can ever imagine.
+
+Even when it comes to my grandmother you don’t just say you care, you actually show it. And honestly I don’t take any of it for granted.
+
+I’m grateful God brought you into my life. People like you are rare and I pray life gives you back all the love and kindness you constantly show me.
+
+May you never lack, may your dreams come true and may happiness always find you.
+
+Thank you for being more than a friend and thank you for being a family.
+
+If I had to choose my friend all over again I would choose you every single time.
+
+I love you so much girl.
+
+Happy birthday my forever girl ❤️🫂🎂"
+
+#### LETTER 04 — VANESSA
+
+"Happy Birthday to you Diyaaa 🥹🎂❤️
+
+You’re such a beautiful soul, and I truly hope this new chapter brings you nothing but happiness, peace, love, and countless reasons to smile.
+
+May all the little things you’ve been praying for find their way to you, and may you continue to grow, flourish, and become everything you’re meant to be.
+
+Even though distance has taken the better part of our friendship, I want you to know that I still love you dearly.
+
+The beautiful memories we’ve shared remain close to my heart, and I find comfort in knowing that those moments will always be a part of me.
+
+I genuinely hope life gives us another opportunity to cross paths, reunite, and create even more beautiful memories together. ❤️"
+
+---
+
+## SECTION 05 — ACROSS THE MILES
+
+### LITTLE REMINDERS FROM HOME
+
+This is another major storytelling section.
+
+Heading:
+
+ACROSS THE MILES.
+
+Supporting line:
+
+"Distance means so little when someone means so much."
+
+We do not know Diya's current country or city.
+
+Do not invent her location or use a false geographical route.
+
+Instead, represent distance emotionally through photographs, letters, postcards and voice notes.
+
+### Visual concept
+
+Create an immersive postcard and Polaroid-inspired composition.
+
+The design should feel like receiving little pieces of home.
+
+Include:
+
+- Large Polaroid photographs of Diya with different friends.
+- Individual photographs from the friends.
+- Vintage-style postcard elements.
+- Small handwritten messages.
+- Delicate stamps.
+- Paper textures.
+- Burgundy and pink accents.
+- Audio icons for optional voice notes.
+
+Use photographs of actual friendships whenever available.
+
+Do not invent a group photograph.
+
+### Birthday message postcards
+
+Use short excerpts from the original letters.
+
+Examples:
+
+MATILDA:
+"I miss the gisting, I miss laughing together."
+
+PHYLLIS:
+"Thank you for showing up even when miles apart."
+
+FRANCA:
+"If I had to choose my friend all over again I would choose you every single time."
+
+VANESSA:
+"The beautiful memories we've shared remain close to my heart."
+
+Each postcard should display the writer's name and a photograph where available.
+
+Clicking a postcard may reveal the full corresponding letter from Section 04.
+
+Do not unnecessarily duplicate long paragraphs.
+
+### Voice-note experience
+
+Allow locally supplied audio recordings to be associated with the relevant friend.
+
+Each audio item should have an elegant play button.
+
+Add a small caption:
+
+A LITTLE PIECE OF HOME.
+
+The audio should only play when Diya chooses to listen.
+
+---
+
+## SECTION 06 — A NEW CHAPTER
+
+### A FINAL BIRTHDAY TRIBUTE
+
+This is the final emotional chapter.
+
+It should contain a heartfelt birthday message, a birthday prayer or a combination of both.
+
+Do not turn this into another long collection of paragraphs.
+
+Create a visually beautiful, emotionally powerful closing experience.
+
+Suggested heading:
+
+A NEW CHAPTER BEGINS.
+
+Suggested supporting line:
+
+"May 21 be as beautiful as everything you are becoming."
+
+The section should include selected birthday wishes drawn from the friends' original messages.
+
+Themes include:
+
+- Allah's blessings and barakah.
+- Success in her academic journey.
+- Reward for her hard work.
+- Answered silent prayers.
+- Beautiful opportunities.
+- Genuine love and lasting friendships.
+- Happiness, peace and personal growth.
+
+Suggested final tribute:
+
+"Dear Diya,
+
+Twenty-one looks beautiful on you.
+
+May Allah bless your new chapter with ease, endless barakah and beautiful opportunities. May your hard work bear fruit, your silent prayers find answers and your heart always find reasons to be grateful.
+
+May you continue to grow, flourish and become everything you are meant to be.
+
+Never forget how deeply you are loved.
+
+Happy 21st birthday, Mardiya.
+
+Until the next reunion, the next laughter, the next gist and the next kenkey date.
+
+With all our love, always."
+
+### Visual direction
+
+Use a dramatic burgundy background or a beautifully composed beige and burgundy editorial layout.
+
+Feature one beautiful portrait or a short birthday video.
+
+Include a delicate final decorative detail.
+
+At the bottom:
+
+THE END OF THIS EDITION.
+
+THE BEGINNING OF ANOTHER BEAUTIFUL CHAPTER.
+
+Add a REPLAY OUR LITTLE WORLD button that returns the user to the opening experience.
+
+---
+
+# 7. INTERACTION AND ANIMATION DESIGN
+
+Animations must feel intentional, premium and smooth.
+
+Do not animate everything simultaneously.
+
+Create a coherent animation language throughout the website.
+
+Include:
+
+- Realistic envelope opening animation.
+- Letter reveal animation.
+- Smooth scrolling.
+- Elegant section transitions.
+- Gentle image reveals.
+- Subtle Polaroid rotations.
+- Refined hover interactions.
+- Photo lightbox animations.
+- Expandable letter cards.
+- Smooth audio-player interactions.
+- Small decorative movement where appropriate.
+
+Use GSAP or CSS animations where appropriate.
+
+Use Intersection Observer for scroll-triggered animations if needed.
+
+Respect prefers-reduced-motion accessibility preferences.
+
+Ensure animations do not compromise performance.
+
+---
+
+# 8. NAVIGATION
+
+Use a minimal, elegant navigation system.
+
+It should not compete with the photography or editorial content.
+
+Possible navigation:
+
+THE DIYA EDIT
+
+THE GIRL
+
+SOUL MOMENTS
+
+FOUR HEARTS
+
+ACROSS THE MILES
+
+A NEW CHAPTER
+
+The navigation should be discreet and responsive.
+
+Consider a minimal floating navigation bar or a refined magazine-style chapter menu.
+
+The opening envelope should not be cluttered with navigation.
+
+---
+
+# 9. RESPONSIVE DESIGN
+
+The website must be designed for:
+
+- Desktop computers.
+- Laptops.
+- Tablets.
+- Mobile phones.
+
+Mobile responsiveness is particularly important because Diya may open the website through a WhatsApp link.
+
+Do not simply shrink the desktop layout.
+
+Recompose the scrapbook elements for smaller screens.
+
+Requirements:
+
+- No horizontal overflow.
+- Readable typography.
+- Proper image scaling.
+- Touch-friendly interactive elements.
+- Mobile-friendly letter cards.
+- Responsive Polaroid arrangements.
+- Functional audio controls.
+- Smooth scrolling.
+- Properly positioned navigation.
+- Fast loading.
+
+The website must look intentional at every screen size.
+
+---
+
+# 10. LOCAL CONTENT MANAGEMENT
+
+I must be able to add photographs, voice notes and videos locally without rewriting the website.
+
+Create a straightforward content management approach using JavaScript data files.
+
+Example friendship data:
+
+{
+  name: "Matilda",
+  image: "assets/images/friends/matilda.jpg",
+  audio: "assets/audio/matilda.mp3",
+  message: "Full original birthday message..."
+}
+
+Example memory data:
+
+{
+  title: "The Kenkey Chronicles",
+  category: "SHS DAYS",
+  image: "assets/images/memories/kenkey-memory.jpg",
+  caption: "A memory worth keeping.",
+  type: "image"
+}
+
+Use placeholder asset paths for files that have not yet been supplied.
+
+Do not invent personal photographs or recordings.
+
+If an audio file is unavailable, hide the audio player gracefully.
+
+If a video is unavailable, do not show a broken video container.
+
+Make it clear in the documentation how to add new photographs and audio files.
+
+---
+
+# 11. PERFORMANCE, ACCESSIBILITY AND QUALITY ASSURANCE
+
+The website must:
+
+- Load efficiently.
+- Use optimized image formats such as WebP where appropriate.
+- Use lazy loading for below-the-fold photographs.
+- Include appropriate image alt text.
+- Maintain accessible colour contrast.
+- Have keyboard-accessible controls.
+- Use semantic HTML.
+- Avoid console errors.
+- Avoid broken links and image paths.
+- Work without a backend.
+- Avoid autoplaying audio.
+- Handle missing assets gracefully.
+
+Test every interactive element.
+
+Check the website on desktop and mobile before declaring the project complete.
+
+---
+
+# 12. WHAT NOT TO DO
+
+These instructions are extremely important.
+
+DO NOT:
+
+- Create a generic birthday template.
+- Make the website look like a dashboard.
+- Use a basic three-column card layout throughout.
+- Use childish scrapbook decorations.
+- Overload every section with stickers and hearts.
+- Use excessive pink.
+- Use generic AI-generated portraits in place of real photographs.
+- Use random stock photographs and pretend they are personal memories.
+- Use excessive gradients.
+- Use harsh drop shadows.
+- Make every card look identical.
+- Put all the birthday messages in one long text block.
+- Use long paragraphs for every section.
+- Make the interface excessively rounded or pill-shaped.
+- Add unnecessary animations.
+- Make the website difficult to navigate.
+- Use placeholder content as though it were actual personal information.
+- Leave buttons nonfunctional.
+- Deliver incomplete code.
+- Sacrifice mobile usability for desktop aesthetics.
+
+The website should be visually rich without becoming visually chaotic.
+
+Luxury comes from thoughtful composition, spacing, typography, quality imagery and restraint.
+
+---
+
+# 13. FINAL EXPECTATION
+
+I expect a complete, high-quality frontend website.
+
+The finished experience should feel like a luxury birthday publication, a beautifully handcrafted scrapbook and an emotional friendship archive combined into one.
+
+The visual storytelling must be as important as the written storytelling.
+
+Every section must feel thoughtfully designed.
+
+Every photograph must have a purpose.
+
+Every letter must feel personal.
+
+Every animation must enhance the experience.
+
+The final website should make Diya feel celebrated, remembered, appreciated and deeply loved.
+
+When she opens the envelope, she should feel as though she has been invited into a little world created just for her.
+
+The website must be beautiful enough to impress a professional designer, technically sound enough to satisfy an experienced frontend developer and personal enough to make its recipient emotional.
+
+**THE DIYA EDIT — ISSUE NO. 21**
+
+*For Diya, with all our love.*
+
+Build something extraordinary.
